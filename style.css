@@ -143,7 +143,7 @@ form input{
 }
 
 .button{
-    width: 55px;
+    width: 70px;
     height: 25px;
     border-radius: 5px;
     background-color: #12919D;
@@ -151,7 +151,7 @@ form input{
 }
 
 .button:hover{
-    width: 57px;
+    width: 72px;
     height: 5px;
     border-radius: 5px;
     background-color: #F76C6C;
