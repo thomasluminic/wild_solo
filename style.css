@@ -113,6 +113,53 @@ header > nav {
 
 /* TODO  Form */
 
+form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label{
+    color: #12919D;
+}
+
+form input{
+    width: 100%;
+}
+
+.formitem{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.button{
+    width: 55px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #12919D;
+    color: snow;
+}
+
+.button:hover{
+    width: 57px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F76C6C;
+    cursor: pointer;
+    height: 25px;
+    color: snow;
+}
+
 /* TODO  Plan */
 
 /* TODO  Footer */
