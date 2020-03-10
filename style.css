@@ -81,6 +81,45 @@
             font-family:"Amatic SC";
             margin-top: 20px;
             }
+
+         p.CruiseDescription {
+            text-align:left;
+            margin-left: 7%;
+            margin-right: 7%;
+
+            } 
+        
+        p.apartirde {
+                text-align:left;
+                margin-left: 7%;
+                margin-right: 7%;
+                margin-bottom:0;
+                color: #12919D;
+                font-size: 1.2em;
+
+                } 
+
+        p.prixAdulte {
+                    text-align:center;
+                    margin-left: 7%;
+                    margin-right: 7%;
+                    font-size: 50px;
+                    margin-top:0;
+                    margin-bottom:10%;
+                    font-weight: bold;
+                    color: #12919D;
+    
+                    } 
+
+        p.prixEnfant {
+                        text-align:left;
+                        margin-left: 7%;
+                        margin-right: 7%;
+                        font-size: 30px;
+                        margin-top: 0;
+        
+                        }
+            
           
           .ctabook {
           text-align:center; 
