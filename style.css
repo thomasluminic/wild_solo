@@ -159,9 +159,11 @@
            
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
-            width: 90%;
+            width: 80%;
             margin-top: 4%;
-            display: unset;
+          
+            display: inline-block;
+          
             
             
           }
@@ -172,20 +174,20 @@
           }
           
           
-          /* Add some padding inside the card container */
+          
           
           .container-mob {
-            padding: 2px 16px;
+            padding: 2px;
             justify-content:space-around;
             align-items: center;
             flex-direction: column;
           }
           
           .container2-mob {
-            padding: 2px;
+            padding: auto;
             align-items: center;
             margin-bottom: 5%;
-            
+           
           }
           
           
@@ -290,7 +292,8 @@
             border-color: #12919D;
             margin-top: 2%;
             color: white;
-            font-size: 100%;  
+            font-size: 100%; 
+           
             
           }
         }
