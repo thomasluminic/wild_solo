@@ -22,14 +22,19 @@ form{
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    border: solid 1px black;
+}
+
+form label{
+    color: #12919D;
 }
 
 form input{
-    width: 50%;
+    width: 100%;
 }
 
 .formitem{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -45,6 +50,7 @@ form input{
     height: 25px;
     border-radius: 5px;
     background-color: #12919D;
+    color: snow;
 }
 
 .button:hover{
@@ -54,6 +60,7 @@ form input{
     background-color: #F76C6C;
     cursor: pointer;
     height: 25px;
+    color: snow;
 }
 
 /* TODO  Plan */
