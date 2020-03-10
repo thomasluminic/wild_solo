@@ -116,3 +116,33 @@ header > nav {
 /* TODO  Plan */
 
 /* TODO  Footer */
+.liste-footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 15px;
+    background-color: #f76c6c;
+    color: snow;
+    padding: 1%;
+}
+.liste-footer > li > a {
+    text-decoration: none;
+    color: snow;
+}
+.liste-footer > li > a:hover {
+    color: #12919D;
+}
+.liste-footer > li > a > .fab {
+    font-size: 1.5em;
+}
+@media (max-width : 768px) {
+    .liste-footer {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+    .liste-footer > li {
+        margin-bottom: 10px;
+    }
+}
