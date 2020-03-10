@@ -211,15 +211,19 @@
             }
           
           .ctabook-mob {
-          vertical-align:middle; 
+            text-align:center; 
           }
           
           a.bouton1-mob {
-          padding: 10px; 
-          background: #F76C6C; 
-          color: white; 
-          text-decoration: none
-          }
+            padding: 20px;  
+            background: #F76C6C; 
+            color: white; 
+            text-decoration: none;
+            -moz-border-radius:12px 12px;
+            -webkit-border-radius:10px 12px;
+            border-radius:12px 12px;
+            }
+            
           
           a.bouton1-mob:hover {
           background: #F75C6C; 
