@@ -176,7 +176,7 @@
           
           .container-mob {
             padding: 2px 16px;
-            display:flex;
+            justify-content:space-around;
             align-items: center;
             flex-direction: column;
           }
@@ -212,6 +212,8 @@
 
           p.duree {
           margin-left:1em; 
+          background-color: black;
+          color: white;
         }
           
           .ctabook-mob {
@@ -242,7 +244,9 @@
               display: none;
         }
           .depart-mob {
-          text-decoration: none
+          text-decoration: none;
+          background-color: black;
+          color: white;
           }
           
           .image-mob {
