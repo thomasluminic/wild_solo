@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <script src="https://kit.fontawesome.com/c8a8d1abbe.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <!--TODO Header -->
     <header>
-
+        <nav class="flex wrap">
+            <div class="flex nav-menu">
+                <div id="burger-active" class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <a class="logo" href="#">
+                    <img src="./logo.png" alt="Logo">
+                </a>
+                <a class="para-color" href="#" title="Réserver">Nos croisières</a>
+                <a class="para-color" href="#" title="Notre équipe">Notre équipe</a>
+                <a class="para-color" href="#" title="Accès">Plan d'accès</a>
+                <div class="mobile-menu">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+            </div>
+            <div class="flex nav-button">
+                <button class="reserve-button">Réserver</button>
+            </div>
+            <div id="toggle-menu" class="mobile-menu-hidden">
+                <div class="flex burger-menu">
+                    <a href="#" title="Réserver">Nos croisières</a>
+                    <a href="#" title="Notre équipe">Notre équipe</a>
+                    <a href="#" title="Accès">Plan d'accès</a>
+                </div>
+            </div>
+        </nav>
     </header>
     <!--TODO Cards -->
     <section>
@@ -28,7 +56,7 @@
     </section>
     <!--TODO Footer -->
     <footer>
-
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
