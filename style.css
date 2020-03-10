@@ -13,6 +13,11 @@
 /* TODO  Card */
 
     /* css Desktop */
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3%;
+    }
     
         .card {
             /* Add shadows to create the "card" effect */
@@ -39,27 +44,38 @@
           }
           
           .container2 {
-            padding: 2px 16px; 
+            width:100%; 
+          }
+
+          .container3 {
+            background-color: black;
+    
+        
+     
           }
           
           h4 {
             font-size:  16px;
-            color: #12919D;
+            color: white;
             text-align: left;
             font-family:"Amatic SC";
-            margin-top: 5px;
+            margin-top: -6px;
+            padding: 5%;
             }
           
           .horaire {
-            font-size:  16px;
-            color: #12919D;
+            font-size:  16rem;
+            color: white;
             text-align: left;
             font-family:"Amatic SC";
             margin-top: -20px;
-            margin-bottom: -5px;
+            margin-bottom: -6px;
+            padding: 5%;
+        
             }
           
           h3 {
+            font-size: 22px;
             color: #F76C6C;
             text-align: center;
             font-family:"Amatic SC";
@@ -71,10 +87,13 @@
           }
           
           a.bouton1 {
-          padding: 10px;  
+          padding: 20px;  
           background: #F76C6C; 
           color: white; 
-          text-decoration: none
+          text-decoration: none;
+          -moz-border-radius:12px 12px;
+          -webkit-border-radius:10px 12px;
+          border-radius:12px 12px;
           }
           
           a.bouton1:hover {
