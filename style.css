@@ -9,7 +9,73 @@
     color: #f76c6c;
 }
 /* TODO Header */
-
+header > nav {
+    margin-top: 15px;
+}
+.mobile-menu {
+    display: none;
+}
+.logo {
+    width: 10%;
+}
+.nav-menu {
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-button {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu > a {
+    text-decoration: none;
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+.nav-menu > a:hover {
+    color: #006B77;
+}
+.reserve-button {
+    width: 60%;
+    height: 70%;
+    padding: 0;
+    background-color: #f76c6c;
+    color: #FFFAFA;
+    border: 1px solid #f76c6c;
+    border-radius: 5px;
+}
+@media (max-width: 771px) {
+    .mobile-menu {
+        display: unset;
+    }
+    .nav-menu > a {
+        display: none;
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-menu {
+        width: 100%;
+    }
+    .logo {
+        width: 20%;
+    }
+    .fas {
+        font-size: 25px;
+    }
+    .burger-menu {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .mobile-menu-hidden {
+        display: none;  
+    }
+    .mobile-menu-show {
+        display: unset;
+        transition: 0.6s;
+    }
+}
 /* TODO  Card */
 
 /* TODO  Team */
