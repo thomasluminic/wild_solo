@@ -186,9 +186,9 @@
             align-items: center;
           }
           
-          .depart-mob {
+          .depart-mob, p.duree {
             font-size:  16px;
-            color: #12919D;
+            color: black;
             text-align: left;
             font-family:"Amatic SC";
             margin-top: 10px;
@@ -196,7 +196,7 @@
           
           .horaire-mob {
             font-size:  16px;
-            color: #12919D;
+            color: black;
             text-align: left;
             font-family:"Amatic SC";
             margin-top: -20px;
@@ -209,6 +209,10 @@
             font-family:"Amatic SC";
             margin-top: 20px;
             }
+
+          p.duree {
+          margin-left:1em; 
+        }
           
           .ctabook-mob {
             text-align:center; 
