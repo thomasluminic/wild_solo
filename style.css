@@ -317,6 +317,92 @@ a.bouton1:hover {
 
 /* TODO  Team */
 
+
+
+h2.SectionTitle {
+   text-align:center;
+   
+}
+
+
+
+ul.AllMembers {
+  display:flex; 
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  list-style: none;
+   
+}
+
+li.LiMember {
+  text-align:center;
+  
+}
+
+p.name {
+  font-size: 20px;
+  color:black;
+  margin-bottom:-10%;
+}
+
+p.job {
+  font-size: 20px;
+  color: #f76c6c; 
+  font-weight: bold;
+}
+
+
+
+.MemberA {
+  width: 30px;
+  align-items: left;
+
+  
+}
+
+
+img.Member {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  
+}
+
+p.prenom {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.Member span {
+  visibility:hidden; 
+}
+
+.Member img:hover + span {
+  visibility:visible;
+}
+
+/* mobile team css */
+
+@media screen and (max-width: 768px) {
+
+  ul.AllMembers {
+    display:flex; 
+    flex-direction: column;
+	  flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    margin-left: 6%;
+     
+  }
+
+}
+
+
+
 /* TODO  Form */
 
 .formContainer h2{
@@ -370,7 +456,6 @@ form input{
     height: 25px;
     color: snow;
 }
-
 @media (max-width: 1025px) {
     form{
         width: 60%;
@@ -390,7 +475,6 @@ form input{
         font-size: 75%;
     }
 }
-
 /* TODO  Plan */
 hr{
     width: 66%;
