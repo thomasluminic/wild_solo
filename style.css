@@ -399,6 +399,11 @@ header > nav {
 
 /* TODO  Form */
 
+.formContainer h2{
+    display: flex;
+    justify-content: center;
+}
+
 form{
     width: 30%;
     display: flex;
