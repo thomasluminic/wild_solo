@@ -130,10 +130,18 @@ ul.AllMembers {
    
 }
 
+li.LiMember {
+  text-align:center;
+  
+}
 
 p.name {
-  margin-left: 35%;
-  margin-right: 35%;
+  font-size: 20px;
+  color:black;
+  margin-bottom:-10%;
+}
+
+p.job {
   font-size: 20px;
   color: #f76c6c; 
   font-weight: bold;
@@ -184,6 +192,7 @@ p.prenom {
     margin-left: 6%;
      
   }
+
 }
 
 
