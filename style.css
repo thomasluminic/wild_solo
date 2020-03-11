@@ -446,6 +446,26 @@ form input{
     color: snow;
 }
 
+@media (max-width: 1025px) {
+    form{
+        width: 60%;
+    }
+
+    .names div{
+        width: 48%;
+    }
+    
+    .names {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   ::placeholder{
+        font-size: 75%;
+    }
+}
+
 /* TODO  Plan */
 
 /* TODO  Footer */
