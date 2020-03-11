@@ -111,6 +111,83 @@ header > nav {
 
 /* TODO  Team */
 
+
+
+h2.SectionTitle {
+   text-align:center;
+   
+}
+
+
+
+ul.AllMembers {
+  display:flex; 
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  list-style: none;
+   
+}
+
+
+p.name {
+  margin-left: 35%;
+  margin-right: 35%;
+  font-size: 20px;
+  color: #f76c6c; 
+  font-weight: bold;
+}
+
+
+
+.MemberA {
+  width: 30px;
+  align-items: left;
+
+  
+}
+
+
+img.Member {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  
+}
+
+p.prenom {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.Member span {
+  visibility:hidden; 
+}
+
+.Member img:hover + span {
+  visibility:visible;
+}
+
+/* mobile team css */
+
+@media screen and (max-width: 768px) {
+
+  ul.AllMembers {
+    display:flex; 
+    flex-direction: column;
+	  flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    margin-left: 6%;
+     
+  }
+}
+
+
+
 /* TODO  Form */
 
 form{
@@ -159,6 +236,9 @@ form input{
     height: 25px;
     color: snow;
 }
+
+
+
 
 /* TODO  Plan */
 
