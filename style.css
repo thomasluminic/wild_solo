@@ -2,14 +2,111 @@
 .flex {
     display: flex;
 }
+.wrap {
+    flex-wrap: wrap;
+}
 .para-color {
     color: #12919D;
 }
 .title-color {
     color: #f76c6c;
 }
+body {
+    background-color: #FFFAFA;
+}
 /* TODO Header */
+header > nav {
+    padding-top: 15px;
+    position: sticky;
+}
+.mobile-menu {
+    display: none;
+}
+.logo {
+    width: 10%;
+}
+.logo > img {
+    width: 100%;
+}
+.nav-menu {
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-button {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu > a {
+    text-decoration: none;
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+.nav-menu > a:hover {
+    color: #006B77;
+}
+.reserve-button {
+    width: 60%;
+    height: 70%;
+    padding: 0;
+    background-color: #f76c6c;
+    color: #FFFAFA;
+    border: 1px solid #f76c6c;
+    border-radius: 5px;
+}
+.mobile-menu-hidden {
+    display: none;
+}
+#toggle-menu {
+    width: 100%;
+}
 
+@media (max-width: 1025px) {
+    .mobile-menu {
+        display: unset;
+    }
+    .nav-menu > .para-color {
+        display: none;
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-menu {
+        width: 100%;
+    }
+    .logo {
+        width: 20%;
+    }
+    .fas {
+        font-size: 25px;
+    }
+    .burger-menu {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .mobile-menu-hidden {
+        display: none;  
+    }
+    .burger-menu > a {
+        text-decoration: none;
+    }
+    #burger-active {
+        cursor: pointer;
+    }
+    .burger-menu {
+        flex-direction: column;
+        align-items: center;
+        background-color: #f76c6c;
+        padding-bottom: 5%;
+    }
+    .burger-menu > a {
+        margin-top: 20px;
+        text-decoration: none;
+        color: snow;
+        text-transform: uppercase;
+    }
+}
 /* TODO  Card */
 
     /* css Desktop */
@@ -302,6 +399,83 @@
 
 /* TODO  Form */
 
+form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label{
+    color: #12919D;
+}
+
+form input{
+    width: 100%;
+}
+
+.formitem{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.button{
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #12919D;
+    color: snow;
+}
+
+.button:hover{
+    width: 72px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F76C6C;
+    cursor: pointer;
+    height: 25px;
+    color: snow;
+}
+
 /* TODO  Plan */
 
 /* TODO  Footer */
+.liste-footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 15px;
+    background-color: #f76c6c;
+    color: snow;
+    padding: 1%;
+}
+.liste-footer > li > a {
+    text-decoration: none;
+    color: snow;
+}
+.liste-footer > li > a:hover {
+    color: #12919D;
+}
+.liste-footer > li > a > .fab {
+    font-size: 1.5em;
+}
+@media (max-width : 768px) {
+    .liste-footer {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+    .liste-footer > li {
+        margin-bottom: 10px;
+    }
+}

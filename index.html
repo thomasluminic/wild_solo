@@ -3,20 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <script src="https://kit.fontawesome.com/c8a8d1abbe.js" crossorigin="anonymous"></script>
+    <title>Wild Cruise</title>
 </head>
 <body>
     <!--TODO Header -->
     <header>
-
+        <nav class="flex wrap">
+            <div class="flex nav-menu">
+                <div id="burger-active" class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <a class="logo" href="#">
+                    <img src="./logo.png" alt="Logo">
+                </a>
+                <a class="para-color" href="#" title="Réserver">Nos croisières</a>
+                <a class="para-color" href="#" title="Notre équipe">Notre équipe</a>
+                <a class="para-color" href="#" title="Accès">Plan d'accès</a>
+                <div class="mobile-menu">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+            </div>
+            <div class="flex nav-button">
+                <button class="reserve-button">Réserver</button>
+            </div>
+            <div id="toggle-menu" class="mobile-menu-hidden">
+                <div class="flex burger-menu">
+                    <a href="#" title="Réserver">Nos croisières</a>
+                    <a href="#" title="Notre équipe">Notre équipe</a>
+                    <a href="#" title="Accès">Plan d'accès</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <!--TODO Cards -->
     <section>
-        <!-- Desktop-->
-        <h1>Nos Croisières</h1>
-        <div class= "container">
-            <div class="card">
+      <h1>Nos Croisières</h1>
+      <div class= "container">
+        <div class="card">
               <img src="https://zupimages.net/up/20/11/4hy5.jpg" alt="Croisière Bordeaux de nuit" style="width:100%">
               <div class="container2">
                <div class="container3">
@@ -25,8 +50,6 @@
                 <div class="description"> <h3>Cruise & Wine</h3><p class="CruiseDescription">Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"</p> <p class="apartirde">Tarif Adulte </p><p class="prixAdulte">25€</p><div class="ctabook"><a href="http://www.adresse-de-votre-choix.com/" class="bouton1">Réservez cette croisière</a> </div>
               </div></p></br>
             </div> </div>
-            
-            
             <div class="card">
               <img src="https://zupimages.net/up/20/11/opkk.jpg" alt="Croisière Bordeaux de nuit" style="width:100%">
               <div class="container2">
@@ -127,7 +150,32 @@
     </section>
     <!--TODO Form -->
     <section>
-
+        <form>
+            <div class="formitem">
+            <label for="fname">Prénom:</label>
+            <input type="text" class="fname" name="fname" placeholder="Entrez votre prénom"></input>
+            </div>
+            <div class="formitem">
+            <label for="lname">Nom:</label>
+            <input type="text" class="lname" name="lname" placeholder="Entrez votre nom de famille"></input>
+            </div>
+            <div class="formitem">
+            <label for="nbplacesadulte">Nombre d'adultes:</label>
+            <input type="text" class="nbplacesadulte" name="nbplacesadulte" placeholder="Inidquez ici le nombre en chiffres"></input>
+            </div>
+            <div class="formitem">
+            <label for="nbplacesenfant">Nombre d'enfants:</label>
+            <input type="text" class="nbplacesenfant" name="nbplacesenfant" placeholder="Inidquez ici le nombre en chiffres"></input>
+            </div>
+            <div class="formitem">
+            <label for="email">Email:</label>
+            <input type="email" class="email" name="email" placeholder="exemple@gmail.com"></input>
+            </div>
+            <div class="buttoncontainer">
+            <label for="button"></label>
+            <input type="submit" class="button" value="Envoyer"></input>
+            </div>
+        </form>
     </section>
     <!--TODO Plan -->
     <section>
@@ -135,8 +183,31 @@
     </section>
     <!--TODO Footer -->
     <footer>
-
+        <ul class="liste-footer">
+            <li>
+                <a href="#" title="Mention Légale">mention légale</a>
+            </li>
+            <li>
+                <a href="#" title="Contrat Générale d'Utilisation">c.g.u</a>
+            </li>
+            <li>
+               <a href="#">nous contacter</a>
+            </li>
+            <li>
+                tel : 06.20.20.20.20
+            </li>
+            <li>
+                <a href="facebook.fr">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="twitter.fr">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
