@@ -1,4 +1,7 @@
 /* Gen Class */
+
+
+
 .flex {
     display: flex;
 }
@@ -357,7 +360,7 @@ a.bouton1:hover {
         border-color: #12919D;
         margin-top: 2%;
         color: white;
-        font-size: 100%; 
+        font-size: 100%;
     }
 }
 
@@ -449,14 +452,18 @@ form{
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 form label{
     color: #12919D;
+    margin-bottom: 5px;
+    
 }
 
 form input{
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .formitem{
@@ -472,23 +479,40 @@ form input{
     margin-bottom: 5px;
 }
 
-.button{
-    width: 70px;
-    height: 25px;
-    border-radius: 5px;
-    background-color: #12919D;
-    color: snow;
+.button  {
+    background: #12919D; 
+    color: white; 
+    text-decoration: none;
+    -moz-border-radius:12px 12px;
+    -webkit-border-radius:10px 12px;
+    border-radius:12px 12px;
+    width: 40%;
+    
 }
 
-.button:hover{
-    width: 72px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: #F76C6C;
-    cursor: pointer;
-    height: 25px;
-    color: snow;
+.button:hover{ 
+    background: #f76c6c; 
+    color: white; 
+    text-decoration: none;
+    -moz-border-radius:12px 12px;
+    -webkit-border-radius:10px 12px;
+    border-radius:12px 12px;
+    width: 40%;
 }
+
+input {
+    height: 40px;
+    background-color: none;
+    margin: 10px;
+    font-style: italic;
+}
+
+
+input:focus {
+	outline-color:#12919D;
+    background-color: none;
+}
+
 @media (max-width: 1025px) {
     form{
         width: 60%;
