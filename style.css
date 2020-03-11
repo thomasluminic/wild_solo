@@ -1,7 +1,11 @@
-/* Gen Class */
-
-
-
+/* ANCHOR Gen Class */
+@font-face {
+    font-family: 'Baloo Chettan 2';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Baloo Chettan 2 Regular'), local('BalooChettan2-Regular'), url(https://fonts.gstatic.com/s/baloochettan2/v1/vm8udRbmXEva26PK-NtuX4ynWEzv5_d6GJUTlw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 .flex {
     display: flex;
 }
@@ -36,7 +40,7 @@ hr {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-/* TODO Header */
+/* ANCHOR  Header */
 header {
     position: sticky;
     top: 0px;
@@ -363,9 +367,7 @@ a.bouton1:hover {
         font-size: 100%;
     }
 }
-
-/* TODO  Team */
-
+/* ANCHOR   Team */
 h2.SectionTitle {
    text-align:center;
    
@@ -439,7 +441,7 @@ p.prenom {
   }
 }
 
-/* TODO  Form */
+/* ANCHOR   Form */
 
 .formContainer h2{
     display: flex;
@@ -576,7 +578,7 @@ input:focus {
         text-align: center
     }
 }
-/* TODO  Footer */
+/* ANCHOR Footer */
 footer {
     margin-bottom: 0;
 }
@@ -600,7 +602,6 @@ footer > ul {
 .liste-footer > li > a:hover {
     color: #12919D;
 }
-
 @media (max-width : 768px) {
     .liste-footer {
         flex-direction: column;
