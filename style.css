@@ -17,7 +17,33 @@
 body {
     background-color: #FFFAFA;
 }
+h1 {
+    font-size: 1.9em;
+    color: #12919D;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.8em;
+    color: #12919D;
+    text-transform: uppercase;
+}
+h4 {
+    margin-top: 0;
+}
+hr {
+    width: 66%;
+    border: solid 0.5px #F76C6C;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 /* TODO Header */
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background: snow;
+    border-bottom: #f76c6c 1px solid;
+}
 header > nav {
     padding-top: 15px;
     position: sticky;
@@ -102,6 +128,10 @@ header > nav {
         align-items: center;
         background-color: #f76c6c;
         padding-bottom: 5%;
+        -webkit-animation-duration: 0.6s;
+        -webkit-animation-name: smoothBurger;
+        animation-duration: 0.6s;
+        animation-name: smoothBurger;
     }
     .burger-menu > a {
         margin-top: 20px;
@@ -109,11 +139,18 @@ header > nav {
         color: snow;
         text-transform: uppercase;
     }
+    @keyframes smoothBurger {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 }
 /* CARD Desktop */
 h1 {
     text-align: center;
     margin-bottom: 3%;
+}
+.margin-bottom {
+    margin-bottom: 90px;
 }
 .card {
     /* Add shadows to create the "card" effect */
@@ -136,7 +173,7 @@ h1 {
     width:100%; 
 }
 .container3 {
-    background-color: black;
+    background-color: #12919d;
 }
 h4 {
     font-size:  16px;
@@ -212,6 +249,15 @@ a.bouton1:hover {
 /* css Mobile */
 @media screen and (max-width: 768px) {
     .container {
+        display: none;
+    }
+    #descmobile1 {
+        display: none;
+    }
+    #descmobile2 {
+        display: none;
+    }
+    #descmobile3 {
         display: none;
     }
     .card-mob {   
@@ -320,40 +366,33 @@ a.bouton1:hover {
 
 /* TODO  Team */
 
-
-
 h2.SectionTitle {
    text-align:center;
    
 }
-
-
-
 ul.AllMembers {
   display:flex; 
   justify-content: space-around;
   align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
   list-style: none;
-   
 }
 
 li.LiMember {
   text-align:center;
-  
+  margin-bottom: 50px;
 }
 
 p.name {
   font-size: 20px;
-  color:black;
-  margin-bottom:-10%;
+  color:#12919d;
+  margin-bottom: 0;
 }
 
 p.job {
   font-size: 20px;
   color: #f76c6c; 
   font-weight: bold;
+  margin-top: 0;
 }
 
 
@@ -368,9 +407,8 @@ p.job {
 
 img.Member {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  
+  width: 300px;
+  height: 300px;
 }
 
 p.prenom {
@@ -391,20 +429,15 @@ p.prenom {
 /* mobile team css */
 
 @media screen and (max-width: 768px) {
-
   ul.AllMembers {
     display:flex; 
     flex-direction: column;
-	  flex-wrap: nowrap;
+	flex-wrap: nowrap;
     align-items: center;
     list-style: none;
-    margin-left: 6%;
-     
+    padding: 0;
   }
-
 }
-
-
 
 /* TODO  Form */
 
@@ -499,21 +532,57 @@ input:focus {
         font-size: 75%;
     }
 }
-/* TODO  Plan */
-hr{
-    width: 66%;
-    border: solid 0.5px #F76C6C;
-    margin-top: 25px;
-    margin-bottom: 25px;
+.contact-section {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
-
-iframe{
-    width: 100%;
-    height: 30%; 
-    border: 0;
+.contact-title {
+    margin-bottom: 50px;
 }
-
+.contact-map {
+    width: 70%;
+    justify-content: center;
+}
+.contact-text {
+    width: 30%;
+}
+.contact-step {
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+.contact-text > p > a > .fab {
+    margin-right: 15px;
+    color: #12919D;
+    font-size: 40px;
+}
+.contact-text > p > a > .fab:hover {
+    color: #f76c6c;
+}
+.section-margin {
+    margin-bottom: 50px;
+}
+@media (max-width : 769px) {
+    .contact-section {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .contact-map {
+        width: 100%;
+    }
+    .contact-text {
+        width: 100%;
+        text-align: center
+    }
+}
 /* TODO  Footer */
+footer {
+    margin-bottom: 0;
+}
+footer > ul {
+    margin-bottom: 0;
+}
 .liste-footer {
     display: flex;
     justify-content: space-evenly;
@@ -531,9 +600,7 @@ iframe{
 .liste-footer > li > a:hover {
     color: #12919D;
 }
-.liste-footer > li > a > .fab {
-    font-size: 1.5em;
-}
+
 @media (max-width : 768px) {
     .liste-footer {
         flex-direction: column;
