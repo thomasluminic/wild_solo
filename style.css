@@ -170,7 +170,7 @@ h1 {
     width:100%; 
 }
 .container3 {
-    background-color: black;
+    background-color: #12919d;
 }
 h4 {
     font-size:  16px;
@@ -381,7 +381,7 @@ li.LiMember {
 
 p.name {
   font-size: 20px;
-  color:black;
+  color:#12919d;
   margin-bottom: 0;
 }
 
