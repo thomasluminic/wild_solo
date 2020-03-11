@@ -447,6 +447,18 @@ form input{
 }
 
 /* TODO  Plan */
+hr{
+    width: 66%;
+    border: solid 0.5px #F76C6C;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+iframe{
+    width: 100%;
+    height: 30%; 
+    border: 0;
+}
 
 /* TODO  Footer */
 .liste-footer {
