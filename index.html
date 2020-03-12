@@ -19,9 +19,10 @@
                 <a class="logo" href="#">
                     <img src="./img/logo.png" alt="Logo">
                 </a>
-                <a class="para-color" href="#" title="Réserver">Nos croisières</a>
-                <a class="para-color" href="#" title="Notre équipe">Notre équipe</a>
-                <a class="para-color" href="#" title="Accès">Plan d'accès</a>
+                <a class="para-color" href="#cruise" title="Réserver">Nos croisières</a>
+                <a class="para-color" href="#team" title="Notre équipe">Notre équipe</a>
+                <a class="para-color" href="#contactUs" title="Nous contacter">Nous contacter</a>
+                <a class="para-color" href="#findUs" title="Accès">Plan d'accès</a>
                 <div class="mobile-menu">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
@@ -38,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <section class="margin-bottom">
+    <section id="cruise" class="margin-bottom">
     <h1>Nos Croisières</h1>
     <div class= "container">
         <!-- ANCHOR  CARD 1 -->
@@ -60,7 +61,7 @@
                         25€
                     </p>
                     <div class="ctabook">
-                        <a href="http://www.adresse-de-votre-choix.com/" class="bouton1">Réservez cette croisière</a>
+                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,7 @@
                         50€
                     </p>
                     <div class="ctabook">
-                        <a href="http://www.adresse-de-votre-choix.com/" class="bouton1">Réservez cette croisière</a>
+                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
                     </div>
                 </div>
             </div>
@@ -110,7 +111,7 @@
                         75€
                     </p>
                     <div class="ctabook">
-                        <a href="http://www.adresse-de-votre-choix.com/" class="bouton1">Réservez cette croisière</a>
+                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +149,7 @@
                             25€
                         </p>
                         <div class="ctabook-mob">
-                            <a href="http://www.adresse-de-votre-choix.com/" class="bouton1-mob">Réservez cette croisière</a>
+                            <a href="./payment.html" class="bouton1-mob">Réservez cette croisière</a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +186,7 @@
                             50€
                         </p>
                         <div class="ctabook-mob">
-                            <a href="http://www.adresse-de-votre-choix.com/" class="bouton1-mob">
+                            <a href="./payment.html" class="bouton1-mob">
                                 Réservez cette croisière
                             </a>
                         </div>
@@ -220,7 +221,7 @@
                     <p class="apartirde">Tarif Adulte </p>
                     <p class="prixAdulte">75€</p>
                     <div class="ctabook-mob">
-                        <a href="http://www.adresse-de-votre-choix.com/" class="bouton1-mob">Réservez cette croisière</a>
+                        <a href="./payment.html" class="bouton1-mob">Réservez cette croisière</a>
                     </div>
                 </div>
             </div>
@@ -228,7 +229,7 @@
     </div>
     </section>
     <hr>
-    <section>
+    <section id="team">
         <!-- ANCHOR TEAM -->
     <h2 class="SectionTitle"> Notre équipe</h2>
     <div class="team">
@@ -258,7 +259,7 @@
     </section>
     <hr>
     <!-- ANCHOR CONTACT US -->
-    <section class="formContainer">
+    <section id="contactUs" class="formContainer">
         <h2>nous contacter</h2>
         <form>
             <div class="formitem names">
@@ -272,26 +273,22 @@
                 </div>
             </div>
             <div class="formitem">
-            <label for="nbplacesadulte">Nombre d'adultes:</label>
-            <input type="text" class="nbplacesadulte" name="nbplacesadulte" placeholder="Inidquez ici le nombre en chiffres"></input>
-            </div>
+                <label for="email">Email:</label>
+                <input type="email" class="email" name="email" placeholder="exemple@gmail.com"></input>
+                </div>
             <div class="formitem">
-            <label for="nbplacesenfant">Nombre d'enfants:</label>
-            <input type="text" class="nbplacesenfant" name="nbplacesenfant" placeholder="Inidquez ici le nombre en chiffres"></input>
-            </div>
-            <div class="formitem">
-            <label for="email">Email:</label>
-            <input type="email" class="email" name="email" placeholder="exemple@gmail.com"></input>
+                <label for="message">Votre message</label>
+                <textarea name="message" id="" ></textarea>
             </div>
             <div class="buttoncontainer">
-            <label for="button"></label>
-            <input type="submit" class="button" value="Envoyer"></input>
+                <label for="button"></label>
+                <input type="submit" class="button" value="Envoyer"></input>
             </div>
         </form>
     </section>
     <hr>
     <!-- ANCHOR FIND US -->
-    <section class="section-margin">
+    <section id="findUs" class="section-margin">
         <h2 class="contact-title">nous trouver</h2>
         <div class="flex contact-section">
             <div class="flex contact-map">

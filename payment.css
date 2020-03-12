@@ -1,19 +1,15 @@
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('./img/bassin.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 nav {
     background-color: #f76c6c;
 }
-main {
+section {
     display: flex;
     justify-content: center;
 }
-main > div {
+section > div {
     width: 50%;
     height: 400px;
     margin-top: 150px;
@@ -106,4 +102,21 @@ label {
 @keyframes smoothStep {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+@media (max-width : 769px) {
+    body {
+        min-height: 100%;
+    }
+}
+@media (max-width : 376px) {
+    section > div {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 0px;
+    }
+    .next-button {
+        width: 35%;
+        padding: 15px;
+    }
 }
