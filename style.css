@@ -55,6 +55,18 @@ header > nav {
     border: 1px solid #f76c6c;
     border-radius: 5px;
 }
+
+.reserve-button:hover{
+    width: 61%;
+    height: 71%;
+    padding: 0;
+    background-color: #12919D;
+    color: #FFFAFA;
+    border: 1px solid #12919D;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
 .mobile-menu-hidden {
     display: none;
 }
@@ -133,7 +145,7 @@ h1 {
     width:100%; 
 }
 .container3 {
-    background-color: black;
+    background-color: #404040;
 }
 h4 {
     font-size:  16px;
@@ -495,7 +507,7 @@ iframe{
     justify-content: space-evenly;
     text-transform: uppercase;
     list-style: none;
-    padding: 15px;
+    align-items: center;
     background-color: #f76c6c;
     color: snow;
     padding: 1%;
