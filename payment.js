@@ -12,25 +12,25 @@ stepButton.addEventListener('click', (event) => {
         step1.setAttribute('class', 'show-off step-flex');
         step2.setAttribute('class', 'show-on step-flex');
         stepTitle.textContent = 'étape 2 / 5'
-        document.body.style.backgroundImage = "url('./img/backgroundStep2.jpg')";
+       // document.body.style.background= "no-repeat url('./img/backgroundStep2.jpg')";
     }
     if (step === 2) {
         step2.setAttribute('class', 'show-off step-flex');
         step3.setAttribute('class', 'show-on step-flex');
         stepTitle.textContent = 'étape 3 / 5'
-        document.body.style.backgroundImage = "url('./img/backgroundStep3.jpg')";
+        // document.body.style.background = "no-repeat url('./img/backgroundStep3.jpg')";
     }
     if (step === 3) {
         step3.setAttribute('class', 'show-off step-flex');
         step4.setAttribute('class', 'show-on step-flex');
         stepTitle.textContent = 'étape 4 / 5'
-        document.body.style.backgroundImage = "url('./img/bassin.jpg')";
+        // document.body.style.background = "no-repeat url('./img/bassin.jpg')";
     }
     if (step === 4) {
         step4.setAttribute('class', 'show-off step-flex');
         step5.setAttribute('class', 'show-on step-flex');
         stepTitle.textContent = 'étape 5 / 5';
         stepButton.setAttribute('class', 'show-off');
-        document.body.style.backgroundImage = "url('./img/backgroundStep2.jpg')";
+        // document.body.style.background = "no-repeat url('./img/backgroundStep2.jpg')";
     }
 })

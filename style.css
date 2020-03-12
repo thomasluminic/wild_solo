@@ -6,6 +6,9 @@
     src: local('Baloo Chettan 2 Regular'), local('BalooChettan2-Regular'), url(https://fonts.gstatic.com/s/baloochettan2/v1/vm8udRbmXEva26PK-NtuX4ynWEzv5_d6GJUTlw.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+body {
+    font-family: 'Baloo Chettan 2';
+}
 .flex {
     display: flex;
 }
@@ -31,8 +34,15 @@ h2 {
     color: #12919D;
     text-transform: uppercase;
 }
+h3 {
+    font-size: 35px;
+    color: #F76C6C;
+    text-align: center;
+    margin-top: 20px;
+}
 h4 {
     margin-top: 0;
+    font-size: 20px;
 }
 hr {
     width: 66%;
@@ -82,6 +92,7 @@ header > nav {
 .reserve-button {
     width: 60%;
     height: 70%;
+    font-size: 35px;
     padding: 0;
     background-color: #f76c6c;
     color: #FFFAFA;
@@ -148,7 +159,7 @@ header > nav {
         100% { opacity: 1; }
     }
 }
-/* CARD Desktop */
+/* ANCHOR CARD Desktop */
 h1 {
     text-align: center;
     margin-bottom: 3%;
@@ -177,29 +188,20 @@ h1 {
     width:100%; 
 }
 .container3 {
-    background-color: #12919d;
+    background-color: #4a4242;
 }
 h4 {
-    font-size:  16px;
     color: white;
     text-align: left;
-    font-family:"Amatic SC";
     padding: 5%;
 }
 .horaire {
     font-size:  16rem;
     color: white;
     text-align: left;
-    font-family:"Amatic SC";
     padding: 5%;
 }
-h3 {
-    font-size: 22px;
-    color: #F76C6C;
-    text-align: center;
-    font-family:"Amatic SC";
-    margin-top: 20px;
-}
+
 p.CruiseDescription {
     text-align:left;
     margin-left: 7%;
@@ -290,14 +292,14 @@ a.bouton1:hover {
         font-size:  16px;
         color: black;
         text-align: left;
-        font-family:"Amatic SC";
+
         margin-top: 10px;
     } 
     .horaire-mob {
         font-size:  16px;
         color: black;
         text-align: left;
-        font-family:"Amatic SC";
+
         margin-top: -20px;
         margin-bottom: -5px;
     }
@@ -352,7 +354,7 @@ a.bouton1:hover {
         color: #F76C6C;
         font-size: 250%;
         text-align: center;
-        font-family:"Amatic SC";
+
         margin-top: 20px;
         margin-bottom: 0;
     }
@@ -468,6 +470,13 @@ form input{
     margin-bottom: 10px;
 }
 
+form textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 .formitem{
     display: flex;
     flex-direction: column;
@@ -541,6 +550,7 @@ input:focus {
 }
 .contact-title {
     margin-bottom: 50px;
+    text-align: center;
 }
 .contact-map {
     width: 70%;
