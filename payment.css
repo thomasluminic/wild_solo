@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/bassin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav {
+    background-color: #f76c6c;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+main > div {
+    width: 50%;
+    height: 400px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f76c6c;
+    color: snow;
+}
+input, select {
+    width: 60%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+img {
+    width: 30%;
+    margin: 0 auto;
+}
+a {
+    text-align: center;
+}
+label {
+    width: 60%;
+    font-size: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step-title {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.nav-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: snow;
+}
+.nav-title {
+    width: 70%;
+}
+.nav-back {
+    width: 30%;
+    font-size: 30px;
+}
+.nav-back > a > .fas {
+    color: snow;
+    margin-left: 15px;
+    
+}
+.fas:hover {
+    animation-name: rotate;
+    animation-duration: 0.6s;
+}
+.step-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: smoothStep;
+    animation-duration: 0.6s;
+}
+.next-button {
+    width: 20%;
+    padding: 5px;
+    color: #12919D;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background-color: snow;
+    border-radius: 5px;
+    border: 0px white;
+}
+#stepTitle {
+    text-align: center;
+    text-transform: uppercase;
+}
+.show-off {
+    display: none;
+    opacity: 0;
+}
+@keyframes rotate {
+    0% { rotate: 0;}
+    50% { rotate: -180deg; }
+    100% {rotate: 0;}
+}
+@keyframes smoothStep {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
