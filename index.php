@@ -23,72 +23,28 @@
     <h1>Nos Croisières</h1>
     <div class= "container">
         <!-- ANCHOR  CARD 1 -->
+        <?php
+            require_once('./components/cards.php');
+            foreach ($cards as $card => $info) {
+        ?>
         <div class="card">
-            <img src="https://zupimages.net/up/20/11/4hy5.jpg" alt="Croisière Bordeaux de nuit" style="width:100%">
-            <div class="container2">
-                <div class="container3">
-                    <div class="depart"> <h4>Départ tous les jours 18h  -  Durée 2h</h4> </div>
-                </div>
-                <div class="description">
-                    <h3>Cruise & Wine</h3>
-                    <p class="CruiseDescription">
-                        Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"
-                    </p> 
-                    <p class="apartirde">
-                        Tarif Adulte
-                    </p>
-                    <p class="prixAdulte">
-                        25€
-                    </p>
-                    <div class="ctabook">
-                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR  CARD 2 -->
-        <div class="card">
-            <img src="https://zupimages.net/up/20/11/opkk.jpg" alt="Croisière Bordeaux de nuit" style="width:100%">
+            <img src="<?= $info['img'] ?>" alt="<?= $info['alt'] ?>" style="width:100%">
             <div class="container2">
                 <div class="container3">
                     <div class="depart">
-                        <h4>Départ tous les dimanche 11h  -  Durée: 4h</h4>
-                    </div>
-                </div> 
-                <div class="description">
-                    <h3>Le long de l'estuaire</h3>
-                    <p class="CruiseDescription">Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"</p>
-                    <p class="apartirde">
-                        Tarif Adulte
-                    </p>
-                    <p class="prixAdulte">
-                        50€
-                    </p>
-                    <div class="ctabook">
-                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR  CARD 3 -->
-        <div class="card">
-            <img src="https://i.goopics.net/E1XVK.png" alt="Croisière Bordeaux de nuit" style="width:100%">
-            <div class="container2">
-                <div class="container3">
-                    <div class="depart">
-                        <h4>Départ tout les samedi 9h  -  Durée: 6h</h4>
+                        <h4><?= $info['start'] ?></h4>
                     </div>
                 </div>
                 <div class="description">
-                    <h3>Ile aux oiseaux</h3>
+                    <h3><?= $info['title'] ?></h3>
                     <p class="CruiseDescription">
-                        Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"
+                        <?= $info['description'] ?>
                     </p>
                     <p class="apartirde">
                         Tarif Adulte
                     </p>
                     <p class="prixAdulte">
-                        75€
+                        <?= $info['price'] ?>
                     </p>
                     <div class="ctabook">
                         <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
@@ -96,37 +52,44 @@
                 </div>
             </div>
         </div>
-        <!-- ANCHOR  END CARD DESKTOP -->
+        <?php
+            }
+        ?>
     </div>
     <!-- ANCHOR MOBILE CARDS -->
+    <?php
+        $i = 1;
+        foreach ($cards as $card => $info) {
+            $toggle = 'togg' . $i;
+            $descmobile = 'descmobile' . $i;
+    ?>
     <div class= "container-mob flex">
-        <!-- ANCHOR CARD MOBILE 1 -->
         <div class="card-mob">
             <div class="image-mob">
                 <img src="https://zupimages.net/up/20/11/ic2f.png" alt="Croisière Bordeaux de nuit" style="width:100%">
                 <div class="description-mob">
-                    <h3 class="MobCardTitle">Cruise & Wine</h3>
+                    <h3 class="MobCardTitle"><?= $info['title'] ?></h3>
                 </div>
             </div>
             <div class="container2-mob">
                 <div class="container3-mob">
                     <div class="CTAensavoirplus">
-                        <button id="togg1">
+                        <button id="<?= $toggle ?>">
                             En savoir plus
                         </button>
                     </div>
-                    <div id="descmobile1">
+                    <div id="<?= $descmobile ?>">
                         <h4 class="depart-mob">
-                            Départ tous les jours 18h</br> Durée 2h
-                        </h4> 
+                            <?= $info['title'] ?>
+                        </h4>
                         <p class="CruiseDescription">
-                            Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"
-                        </p> 
+                            <?= $info['description'] ?>
+                        </p>
                         <p class="apartirde">
                             Tarif Adulte
                         </p>
                         <p class="prixAdulte">
-                            25€
+                            <?= $info['price'] ?>
                         </p>
                         <div class="ctabook-mob">
                             <a href="./payment.html" class="bouton1-mob">Réservez cette croisière</a>
@@ -135,77 +98,10 @@
                 </div>
             </div>
         </div>
-        <!-- ANCHOR CARD MOBILE 2 -->
-        <div class="card-mob">
-            <div class="image-mob">
-                <img src="https://zupimages.net/up/20/11/opkk.jpg" alt="le long de l'estuaire" style="width:100%">
-                <div class="description-mob">
-                    <h3 class="MobCardTitle">
-                        L'estuaire
-                    </h3>
-                </div>
-            </div>
-            <div class="container2-mob">
-                <div class="container3-mob">
-                    <div class="CTAensavoirplus">
-                        <button id="togg2">
-                            En savoir plus
-                        </button>
-                    </div>
-                    <div id="descmobile2">
-                        <h4 class="depart-mob">
-                            Départ tous les dimanche 11h</br> Durée 4h
-                        </h4> 
-                        <p class="CruiseDescription">
-                            Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"
-                        </p> 
-                        <p class="apartirde">
-                            Tarif Adulte
-                        </p>
-                        <p class="prixAdulte">
-                            50€
-                        </p>
-                        <div class="ctabook-mob">
-                            <a href="./payment.html" class="bouton1-mob">
-                                Réservez cette croisière
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR CARD MOBILE 3 -->
-        <div class="card-mob">
-            <div class="image-mob">
-                <img src="https://zupimages.net/up/20/11/r1u5.png" alt="Ile aux oiseaux" style="width:100%">
-                <div class="description-mob">
-                    <h3 class="MobCardTitle">
-                        L'Ile aux oiseaux
-                    </h3>
-                </div>
-            </div>
-            <div class="container2-mob">
-                <div class="container3-mob">
-                    <div class="CTAensavoirplus">
-                        <button id="togg3">
-                            En savoir plus
-                        </button>
-                    </div>
-                    <div id="descmobile3">
-                        <h4 class="depart-mob">
-                            Départ tous les dimanche 9G </br> Durée 6h
-                        </h4> 
-                    <p class="CruiseDescription">
-                        Découvrir les charmes du Bassin d'Arcachon, le temps d'une journée, d'un pique-nique et d'une baignade à l'île aux oiseaux, comme dans le film "Les petits mouchoirs"
-                    </p> 
-                    <p class="apartirde">Tarif Adulte </p>
-                    <p class="prixAdulte">75€</p>
-                    <div class="ctabook-mob">
-                        <a href="./payment.html" class="bouton1-mob">Réservez cette croisière</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+        $i++;
+        }
+        ?>
     </div>
     </section>
     <hr>
