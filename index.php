@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <script src="https://kit.fontawesome.com/c8a8d1abbe.js" crossorigin="anonymous"></script>
     <meta name="description" content="Bienvenue chez Wild Cruise choisissez une de nos croisières fluviale avec la meilleur équipe du monde">
     <meta name="author" content="Chloé Trottin, Xavi Regnier, Thomas Luminic">
@@ -16,37 +16,9 @@
     <title>Wild Cruise</title>
 </head>
 <body>
-    <!--ANCHOR Header-->
-    <header>
-        <nav class="flex wrap">
-            <div class="flex nav-menu">
-                <div id="burger-active" class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <a class="logo" href="#">
-                    <img src="./img/logo.png" alt="Logo">
-                </a>
-                <a class="para-color" href="#cruise" title="Réserver">Nos croisières</a>
-                <a class="para-color" href="#team" title="Notre équipe">Notre équipe</a>
-                <a class="para-color" href="#contactUs" title="Nous contacter">Nous contacter</a>
-                <a class="para-color" href="#findUs" title="Accès">Plan d'accès</a>
-                <div class="mobile-menu">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-            </div>
-            <div class="flex nav-button">
-                <button class="reserve-button">Réserver</button>
-            </div>
-            <div id="toggle-menu" class="mobile-menu-hidden">
-                <div class="flex burger-menu">
-                    <a href="#" title="Réserver">Nos croisières</a>
-                    <a href="#" title="Notre équipe">Notre équipe</a>
-                    <a href="" title="Nous contacter">Nous contacter</a>
-                    <a href="#" title="Accès">Plan d'accès</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+<?php
+    require_once('./components/header.php');
+?>
     <section id="cruise" class="margin-bottom">
     <h1>Nos Croisières</h1>
     <div class= "container">
@@ -320,32 +292,9 @@
         </div>
     </section>
     <!-- ANCHOR FOOTER -->
-    <footer>
-        <ul class="liste-footer">
-            <li>
-                <a href="#" title="Mention Légale">mention légale</a>
-            </li>
-            <li>
-                <a href="#" title="Contrat Générale d'Utilisation">c.g.u</a>
-            </li>
-            <li>
-               <a href="#">nous contacter</a>
-            </li>
-            <li>
-                tel : 06.20.20.20.20
-            </li>
-            <li>
-                <a href="facebook.fr">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-            </li>
-            <li>
-                <a href="twitter.fr">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
-            </li>
-        </ul>
-    </footer>
-<script src="./script.js"></script>
+    <?php
+        require_once('./components/footer.php');
+    ?>
+<script src="./js/script.js"></script>
 </body>
 </html>
