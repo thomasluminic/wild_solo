@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="./css/payment.css">
     <link rel="preload" href="./img/backgroundStep2.jpg" as="image">
     <link rel="preload" href="./img/backgroundStep3.jpg" as="image">
     <script src="https://kit.fontawesome.com/c8a8d1abbe.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
             <div>
                 <h1 id="stepTitle" class="step-title">étape 1 / 5</h1>
             </div>
-            <form>
+            <form method="post" action="validatePayment.php">
                 <div id="step1" class="show-on step-flex">
                     <label for="name">Nom</label>
                     <input type="text" name="name" id="name" placeholder="Veuillez saisir votre nom">
@@ -55,8 +55,8 @@
                     <input type="text" name="adress" id="adress" placeholder="Veuillez saisir votre adresse">
                 </div>
                 <div id="step5" class="show-off">
-                    <h2>Paiement :</h2>
-                    <a href="index.php"><img src="./img/paypal.jpg" alt="Paypal"></a>
+                    <h2>Récapitulatif :</h2>
+                    <button type="submit">Envoyer</button>
                 </div>
             </form>
             <div class="step-flex">
@@ -64,6 +64,36 @@
             </div>
         </div>
     </section>
-<script src="./payment.js"></script>
+<?php
+    var_dump($_POST);
+    if (!empty($_POST)) {
+        $errors = [];
+        $selectValue = [
+            'pirates',
+            'vines',
+            'lost',
+        ];
+        if (empty($_POST['name']) || empty($_POST['firstname'])) {
+            $errors[] = 'Veuillez écrire votre nom et prénom à l\'étape 1';
+        }
+        if (empty($_POST['stepChoice']) || !in_array($_POST['stepChoice'])) {
+            $errors[] = 'Veuillez sélectionnez votre choix de croisière à l\'étape 2';
+        }
+        if (empty($_POST['nbChildren']) || empty($_POST['nbAdults'])) {
+            $errors[] = 'Veuillez renseigner le nombre de participant à l\'étape 3';
+        }
+        if (empty($_POST['email']) || !preg_match("\w+@\w.+[a-z]{2-4}")) {
+            $errors[] = 'Votre email n\'est pas valide';
+        }
+        if (empty($_POST['adress'])) {
+            $errors[] = 'Veuillez saisir votre adresse';
+        }
+        if (empty($errors)) {
+
+        } else {
+
+        }
+?>
+<script src="./js/payment.js"></script>
 </body>
 </html>
