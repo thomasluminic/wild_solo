@@ -9,6 +9,9 @@
 body {
     font-family: 'Baloo Chettan 2';
 }
+.recap-center {
+    text-align: center;
+}
 .flex {
     display: flex;
 }

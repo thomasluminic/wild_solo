@@ -25,7 +25,7 @@
         <!-- ANCHOR  CARD 1 -->
         <?php
             require_once('./components/cards.php');
-            foreach ($cards as $card => $info) {
+            foreach ($cards as $card => $info):
         ?>
         <div class="card">
             <img src="<?= $info['img'] ?>" alt="<?= $info['alt'] ?>" style="width:100%">
@@ -47,14 +47,12 @@
                         <?= $info['price'] ?>
                     </p>
                     <div class="ctabook">
-                        <a href="./payment.html" class="bouton1">Réservez cette croisière</a>
+                        <a href="payment.php" class="bouton1">Réservez cette croisière</a>
                     </div>
                 </div>
             </div>
         </div>
-        <?php
-            }
-        ?>
+        <?php endforeach; ?>
     </div>
     <!-- ANCHOR MOBILE CARDS -->
     <?php
@@ -92,7 +90,7 @@
                             <?= $info['price'] ?>
                         </p>
                         <div class="ctabook-mob">
-                            <a href="./payment.html" class="bouton1-mob">Réservez cette croisière</a>
+                            <a href="payment.php" class="bouton1-mob">Réservez cette croisière</a>
                         </div>
                     </div>
                 </div>

@@ -94,6 +94,18 @@ label {
     display: none;
     opacity: 0;
 }
+.errors {
+    text-align: center;
+    background: #F75C6C;
+    color: white;
+    padding: 20px;
+}
+.form-button {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 @keyframes rotate {
     0% { rotate: 0;}
     50% { rotate: -180deg; }

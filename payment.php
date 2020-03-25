@@ -25,75 +25,60 @@
     <section>
         <div>
             <div>
-                <h1 id="stepTitle" class="step-title">étape 1 / 5</h1>
+                <h1 id="stepTitle" class="step-title">étape 1 / 7</h1>
             </div>
-            <form method="post" action="validatePayment.php">
-                <div id="step1" class="show-on step-flex">
+            <?php require_once('./components/validatePayment.php'); ?>
+            <form method="post">
+                <div class="step show-on step-flex">
                     <label for="name">Nom</label>
-                    <input type="text" name="name" id="name" placeholder="Veuillez saisir votre nom">
+                    <input type="text" name="name" id="name" placeholder="Veuillez saisir votre nom" value="<?= !empty($clearPost['name']) ? $clearPost['name'] : '' ?>" required>
                     <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="Veuillez saisir votre prénom">
+                    <input type="text" name="firstname" id="firstname" placeholder="Veuillez saisir votre prénom" value="<?= !empty($clearPost['firstname']) ? $clearPost['firstname'] : '' ?>" required>
                 </div>
-                <div id="step2" class="show-off step-flex">
+                <div class="step show-off step-flex">
                     <label for="stepChoice">Choix d'étape</label>
-                    <select name="stepChoice" id="stepChoice">
+                    <select name="stepChoice" id="stepChoice" required>
+                        <option value="off">Veuillez choisir une option</option>
                         <option value="pirate">Dance avec les requins</option>
                         <option value="vines">Le vin c'est trop bien</option>
                         <option value="lost">Je me suis perdu</option>
                     </select>
                 </div>
-                <div id="step3" class="show-off step-flex">
+                <div class="step show-off step-flex">
                     <label for="nbAdults">Nombre d'adulte</label>
-                    <input type="text" name="nbAdults" id="nbAdults" placeholder="Veuillez saisir le nombre d'adults">
+                    <input type="text" name="nbAdults" id="nbAdults" placeholder="Veuillez saisir le nombre d'adults" value="<?= !empty($clearPost['nbAdults']) ? $clearPost['nbAdults'] : '' ?>" required>
                     <label for="nbChildren">Nombre d'enfant</label>
-                    <input type="text" name="nbChildren" id="nbChildren" placeholder="Veuillez saisir le nombre d'enfants">
+                    <input type="text" name="nbChildren" id="nbChildren" placeholder="Veuillez saisir le nombre d'enfants" value="<?= !empty($clearPost['nbChildren']) ? $clearPost['nbChildren'] : '' ?>" required>
                 </div>
-                <div id="step4" class="show-off step-flex">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Veuillez saisir votre email">
+                <div class="step show-off step-flex">
                     <label for="adress">Adresse</label>
-                    <input type="text" name="adress" id="adress" placeholder="Veuillez saisir votre adresse">
+                    <input type="text" name="adress" id="adress" placeholder="Veuillez saisir votre adresse" value="<?= !empty($clearPost['adress']) ? $clearPost['adress'] : '' ?>" required>
+                    <label for="postalCode">Code postal</label>
+                    <input type="text" name="postalCode" id="postalCode" placeholder="Code postal" value="<?= !empty($clearPost['postalCode']) ? $clearPost['postalCode'] : '' ?>" required>
                 </div>
-                <div id="step5" class="show-off">
+                <div class="step show-off step-flex">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Veuillez saisir votre email" value="<?= !empty($clearPost['email']) ? $clearPost['email'] : '' ?>" required>
+                    <label for="confirmEmail">Confirmation Email</label>
+                    <input type="email" name="confirmEmail" id="email" placeholder="Veuillez saisir votre email" required>
+                </div>
+                <div class="step show-off step-flex">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" placeholder="Mon mot de passe" value="<?= !empty($clearPost['password']) ? $clearPost['password'] : '' ?>" required>
+                    <label for="confirmPassword">Confirmation mot de passe</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmer mon mot de passe" required>
+                </div>
+                <div class="step show-off">
                     <h2>Récapitulatif :</h2>
-                    <button type="submit">Envoyer</button>
+                    <button class="next-button" type="submit">Envoyer</button>
                 </div>
             </form>
-            <div class="step-flex">
-                <button id="buttonStep" class="next-button">Suivant</button>
+            <div class="step-flex form-button">
+                <button id="buttonPreviousStep" class="show-off next-button">Précédent</button>
+                <button id="buttonNextStep" class="next-button">Suivant</button>
             </div>
         </div>
     </section>
-<?php
-    var_dump($_POST);
-    if (!empty($_POST)) {
-        $errors = [];
-        $selectValue = [
-            'pirates',
-            'vines',
-            'lost',
-        ];
-        if (empty($_POST['name']) || empty($_POST['firstname'])) {
-            $errors[] = 'Veuillez écrire votre nom et prénom à l\'étape 1';
-        }
-        if (empty($_POST['stepChoice']) || !in_array($_POST['stepChoice'])) {
-            $errors[] = 'Veuillez sélectionnez votre choix de croisière à l\'étape 2';
-        }
-        if (empty($_POST['nbChildren']) || empty($_POST['nbAdults'])) {
-            $errors[] = 'Veuillez renseigner le nombre de participant à l\'étape 3';
-        }
-        if (empty($_POST['email']) || !preg_match("\w+@\w.+[a-z]{2-4}")) {
-            $errors[] = 'Votre email n\'est pas valide';
-        }
-        if (empty($_POST['adress'])) {
-            $errors[] = 'Veuillez saisir votre adresse';
-        }
-        if (empty($errors)) {
-
-        } else {
-
-        }
-?>
 <script src="./js/payment.js"></script>
 </body>
 </html>
