@@ -41,18 +41,20 @@ if (!empty($_POST)) {
         $select = $connexion->prepare('INSERT INTO cruise 
             (name, firstname, email, password, children, adult, choice_cruise, adress, postal_code)
             VALUES (:name, :firstname, :email, :password, :children, :adult, :choice_cruise, :adress, :postal_code)');
-        $select -> bindValue('name', $clearPost['name']);
-        $select -> bindValue('firstname', $clearPost['firstname']);
-        $select -> bindValue('email', $clearPost['email']);
-        $select -> bindValue('password', $password);
-        $select -> bindValue('children', $clearPost['nbChildren']);
-        $select -> bindValue('adult', $clearPost['nbAdults']);
-        $select -> bindValue('choice_cruise', $clearPost['stepChoice']);
-        $select -> bindValue('adress', $clearPost['adress']);
-        $select -> bindValue('postal_code', $clearPost['postalCode']);
+        $select->bindValue('name', $clearPost['name']);
+        $select->bindValue('firstname', $clearPost['firstname']);
+        $select->bindValue('email', $clearPost['email']);
+        $select->bindValue('password', $password);
+        $select->bindValue('children', $clearPost['nbChildren']);
+        $select->bindValue('adult', $clearPost['nbAdults']);
+        $select->bindValue('choice_cruise', $clearPost['stepChoice']);
+        $select->bindValue('adress', $clearPost['adress']);
+        $select->bindValue('postal_code', $clearPost['postalCode']);
         if($select-> execute()) {
-            $select = $connexion -> query("SELECT id FROM cruise WHERE email = '$email'");
-            $id = $select -> fetch();
+            $select = $connexion -> prepare("SELECT id FROM cruise WHERE email = '$email'");
+            $select->bindValue('email', $email);
+            $select->execute();
+            $id = $select->fetch();
             session_start();
             $_SESSION['id'] = $id;
             header('Location: recapPayment.php');
