@@ -15,7 +15,7 @@
     foreach ($_SESSION['id'] as $value => $key) {
         $id = $key;
     }
-    $info = getAll('cruise', $id, $connexion);
+    $info = findById('cruise', $id, $connexion);
 ?>
 <div class="recap-center">
     <h1>Merci <?= $info['name'] ?>, pour votre reservation !</h1>
